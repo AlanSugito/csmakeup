@@ -1,0 +1,296 @@
+@font-face {
+    font-family: 'futurabook';
+    src: url('font/futura_book_font-webfont.woff2') format('woff2'),
+         url('font/futura_book_font-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'montserratmedium';
+    src: url('font/montserrat-medium-webfont.woff2') format('woff2'),
+         url('font/montserrat-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    
+    
+}
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 20px;
+    font-family: 'futurabook';
+    box-shadow: 0 5px 20px black;
+}
+#navbar img{
+    max-width: 5%;
+    height: auto;
+    padding: 5px;
+    margin-left: 20px;
+}
+#navbar ul{
+    display: flex;
+    margin-right: 20px;
+}
+#navbar ul li{
+    list-style: none;
+    margin-right: 30px;
+}
+#navbar ul li .nav-link{
+    text-decoration: none;
+    color: black;
+}
+#jumbotron{
+    background-image: url(img/banner\ web.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+}
+#services{
+    display: flex;
+    padding-top: 100px;
+    background-color: rgb(201, 201, 201);
+    justify-content: space-evenly;
+    padding-bottom: 50px;
+    flex-wrap: wrap;
+    
+}
+#services .img-container::-webkit-scrollbar{
+    width: 5px;
+}
+#services .img-container::-webkit-scrollbar-track{
+    border-radius: 30px;
+}
+#services .img-container::-webkit-scrollbar-thumb{
+    background-color: white;
+    border-radius: 30px;
+    width: 2px;
+}
+#services .img-container{
+    display: flex;
+    width: 50%;
+    height: 300px;
+    overflow-x: scroll;
+}
+#services .thumb{
+    margin: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+#services .text-services{
+    font-family: 'montserratmedium';
+    width: 20%;
+}
+#services .text-services h1{
+    font-size: 44px;
+    margin-bottom: 10px;
+    
+}
+#services .text-services h2{
+    font-weight: lighter;
+}
+
+#services .text-services h2 span{
+    color: rgb(89, 0, 255);
+    font-weight: bold;
+}
+#services .underline{
+    display: block;
+    width: 100px;
+    height: 2px;
+    background-color: white;
+    margin-bottom: 10px;
+}
+#services .text-services p{
+    font-family: 'futurabook';
+}
+#aisle{
+    display: flex;
+    padding-top: 50px;
+    justify-content: space-evenly;
+    padding-bottom: 50px;
+    flex-wrap: wrap;
+}
+#aisle .gambar{
+    position: relative;
+}
+#aisle img{
+    width: 300px;
+    margin: 50px 50px;
+}
+#aisle .balok{
+    width: 350px;
+    height: 150px;
+    background-color: gold;
+    position: absolute;
+    z-index: -1;
+}
+#aisle .balok.satu{
+    left: 50px;
+    top: 15px;
+}
+#aisle .balok.dua{
+    bottom: 15px;
+}
+#aisle .text-aisle{
+    text-transform: uppercase;
+    font-size: 20px;
+    width: 60%;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+    
+}
+#aisle .text-aisle h1{
+    color: rgb(89, 0, 255);
+    font-family: "montserratmedium";
+    margin-top: 20px;
+}
+#aisle .text-aisle p{
+    text-align: center;
+    font-family: 'futurabook';
+}
+#pricelist{
+    display: flex;
+    background-color: rgb(255, 208, 0);
+    padding-top: 50px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-bottom: 150px;
+}
+#pricelist .pricelist-text{
+    font-family: 'montserratmedium';
+    font-size: 15px;
+    text-transform: uppercase;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    width: 20%;
+    justify-content: space-between;
+}
+#pricelist .pricelist-text span{
+    color: rgb(89, 0, 255);
+    font-size: 30px;
+    
+}
+#pricelist .underline{
+    display: block;
+    width: 150px;
+    height: 2px;
+    background-color: white;
+    margin-bottom: 10px;
+}
+#pricelist .pricelist-text p{
+    font-size: 15px;
+    font-family: 'futurabook';
+}
+#pricelist .pricelist-quote{
+    width: 50%;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'futurabook';
+    font-weight: lighter;
+    height: auto;
+    position: relative;
+    top: 100px;
+}
+#pricelist .pricelist-quote p span{
+    font-size: 100px;
+}
+#pricelist .pricelist-quote::before{
+    content: '"';
+    font-size: 100px;
+    transform: translateX(-400px) translateY(-50px);
+    position: absolute;
+    font-family: "montserratmedium";
+}
+#pricelist .pricelist-quote::after{
+    content: '"';
+    font-size: 100px;
+    transform: translateX(250px);
+    position: absolute;
+    font-family: "montserratmedium";
+
+}
+#kontak{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(201, 201, 201);
+    padding-bottom: 100px;
+    font-family: "montserratmedium";
+    align-items: center;
+    padding-top: 100px;
+}
+#kontak .kontak-text{
+    width: 300px;
+    font-family: "montserratmedium";
+}
+#kontak .kontak-text h2{
+    text-align: right;
+    
+    text-transform: uppercase;
+}
+#kontak .kontak-text h2 span{
+    font-size: 44px;
+    color: rgb(89, 0, 255);
+}
+#kontak .underline{
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: gold;
+    margin-bottom: 10px;
+}
+#kontak .kontak-text p{
+    font-size: 10px;
+}
+#kontak .qr{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    align-items: center;
+}
+#kontak .qr img{
+    max-width: 30%;
+    height: auto;
+    margin-bottom: 10px;
+}
+#kontak .qr a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+#kontak .alamat{
+    border-left: 2px solid black;
+    height: fit-content;
+    padding-left: 10px;
+}
+#sosmed{
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px;
+}
+#sosmed .icon{
+    display: flex;
+    width: 20%;
+    margin-left: 20px;
+}
+#sosmed img{
+    width: 30px;
+}
+#sosmed a{
+    margin-right: 10px;
+}
