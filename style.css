@@ -28,9 +28,31 @@
     justify-content: flex-end;
     background-color: white;
     box-sizing: border-box;
-    padding: 20px;
+    padding: 10px;
     font-family: 'futurabook';
     box-shadow: 0 5px 20px black;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+#navbar .burger{
+    border: 3px solid black;
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 5px;
+    box-sizing: border-box;
+    opacity: 0;
+}
+#navbar .burger .bar{
+    display: block;
+    width: 100%;
+    height: 5px;
+    border-radius: 20px;
+    background-color: black;
 }
 #navbar img{
     max-width: 5%;
@@ -53,8 +75,10 @@
 #jumbotron{
     background-image: url(img/banner\ web.png);
     background-repeat: no-repeat;
-    background-size: cover;
-    height: 400px;
+    background-size: contain;
+    height: 480px;
+    background-attachment: fixed;
+    background-position-y: 70px;
 }
 #services{
     display: flex;
@@ -66,7 +90,7 @@
     
 }
 #services .img-container::-webkit-scrollbar{
-    width: 5px;
+    width: 0;
 }
 #services .img-container::-webkit-scrollbar-track{
     border-radius: 30px;
@@ -80,7 +104,7 @@
     display: flex;
     width: 50%;
     height: 300px;
-    overflow-x: scroll;
+    overflow-x: auto;
 }
 #services .thumb{
     margin: 20px;
@@ -293,4 +317,79 @@
 }
 #sosmed a{
     margin-right: 10px;
+}
+@media only screen and (max-width: 600px) {
+    #navbar{
+        position: relative;
+    }
+    #navbar ul{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        flex-direction: column;
+        justify-content: space-evenly;
+        z-index: 10;
+        height: 30vh;
+        transition: 0.5s;
+        padding-left: 15px;
+        opacity: 1;
+        background-color: white;
+    }
+    #navbar .burger{
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-right: 10px;
+        z-index: 9999;
+        opacity: 1;
+    }
+    .slide{
+        
+        transform: translateY(-120%);
+        z-index: 100;
+        transition: 0.5s;
+        background-color: white;
+    }
+    #jumbotron{
+        margin-top: -40px;
+        background-size: contain;
+        
+    }
+    #services{
+        margin-top: -280px;
+        flex-direction: column;
+        align-items: center;
+    }
+    #services .text-services{
+        width: 80%;
+        margin-left: 20px;
+    }
+    #services .img-container{
+        display: flex;
+        width: 100%;
+        height: 300px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        
+    }
+    #pricelist{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    #pricelist .pricelist-text{
+        width: 80%;
+    }
+    #pricelist .pricelist-quote{
+        width: 80%;
+    }
+    #kontak{
+        flex-direction: column;
+        height: 500px;
+        justify-content: space-around;
+    }
+    #kontak .qr{
+        width: 90%;
+    }
 }
