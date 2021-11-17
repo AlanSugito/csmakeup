@@ -76,7 +76,7 @@
     background-image: url(img/banner\ web.png);
     background-repeat: no-repeat;
     background-size: contain;
-    height: 480px;
+    height: 250px;
     background-attachment: fixed;
     background-position-y: 70px;
 }
@@ -319,6 +319,9 @@
     margin-right: 10px;
 }
 @media only screen and (max-width: 600px) {
+    body{
+        overflow-x: hidden;
+    }
     #navbar{
         position: relative;
     }
@@ -346,20 +349,25 @@
     }
     .slide{
         
-        transform: translateY(-120%);
+        transform: translateY(-130%);
         z-index: 100;
         transition: 0.5s;
         background-color: white;
     }
     #jumbotron{
-        margin-top: -40px;
+        transform: translateY(-10%);
         background-size: contain;
+        background-image: url(img/banner\ web\ mobile.png);
+        z-index: -1;
+        background-color: rgb(255, 208, 0);
+        padding-bottom: 50px;
         
     }
     #services{
-        margin-top: -280px;
+        padding-top: 100px;
         flex-direction: column;
         align-items: center;
+        background-color: rgb(201, 201, 201);
     }
     #services .text-services{
         width: 80%;
